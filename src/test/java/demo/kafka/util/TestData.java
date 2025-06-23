@@ -4,7 +4,7 @@ import demo.kafka.event.DemoInboundEvent;
 import demo.kafka.rest.api.TriggerEventsRequest;
 
 public class TestData {
-
+	// This comment was added to trigger CI/CD pipeline for testing purposes
     public static DemoInboundEvent buildDemoInboundEvent(Integer numberOfEvents) {
         return DemoInboundEvent.builder()
                 .numberOfEvents(numberOfEvents)
