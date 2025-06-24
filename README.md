@@ -7,6 +7,9 @@ The application also consumes an event that triggers sending outbound events. Th
 
 Interacting with the application and Kafka are demonstrated by calling the REST endpoint to trigger emitting events, and by sending events to Kafka and receiving the emitted events from the application via the Kafka commandline tools.
 
+### Important notes
+Minikube is mandatory at this guideline. Although this app can be deployed at any cluster via helm chart. It's tested also with Metallb at a single node cluster with rke2.
+
 # Walkthrough
 
 ### Run minikube
