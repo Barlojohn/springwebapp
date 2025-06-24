@@ -25,12 +25,17 @@ helm install springwebapp kafka_webapp-0.9.0.tgz
 ```
 ![image](https://github.com/user-attachments/assets/1ed5d49e-064e-4d9c-90c4-fab350bb8343)
 
+### Some minutes later the pods should be up and running:
+![image](https://github.com/user-attachments/assets/253624e5-ab4b-4e1a-9175-0d9103879433)
+
 
 ### After the system is up and running expose the spring boot app. This will open the root page of the Spring Boot application in the browser, which displays Spring Boot Demo
 
 ```
 minikube service kafka-kubernetes-demo-service --namespace demo
 ```
+![image](https://github.com/user-attachments/assets/545cf61b-ba39-43f6-bdd6-997080bf6ede)
+
 
 ### Running the Demo, interacting via REST
 
@@ -43,6 +48,8 @@ curl -X GET http://{EXPOSED_IP}:{PORT}/v1/demo/version
 ```
 curl -v -d '{"numberOfEvents":3}' -H "Content-Type: application/json" http://{EXPOSED_IP}:{PORT}/v1/demo/trigger
 ```
+![image](https://github.com/user-attachments/assets/f6a3a0ed-700a-4a28-86a4-5ecf715539cc)
+
 
 ### Check the logs from kafka-kubernetes-demo pod
 
