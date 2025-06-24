@@ -1,4 +1,4 @@
-name: CI - Build and Push Spring Boot Docker Image (Latest)
+name: CI - Build and Push Spring Boot Docker Image (Run Number + Latest)
 
 on:
   push:
@@ -39,8 +39,14 @@ jobs:
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
 
-    - name: Build Docker image with `latest` tag
-      run: docker build -t ${{ secrets.DOCKER_USERNAME }}/kafka-kubernetes-demo:latest .
+    - name: Build Docker image with dynamic tag
+      run: docker build -t ${{ secrets.DOCKER_USERNAME }}/kafka-kubernetes-demo:${{ env.IMAGE_TAG }} .
 
-    - name: Push Docker image to Docker Hub
+    - name: Also tag image as 'latest'
+      run: docker tag ${{ secrets.DOCKER_USERNAME }}/kafka-kubernetes-demo:${{ env.IMAGE_TAG }} ${{ secrets.DOCKER_USERNAME }}/kafka-kubernetes-demo:latest
+
+    - name: Push image with dynamic tag
+      run: docker push ${{ secrets.DOCKER_USERNAME }}/kafka-kubernetes-demo:${{ env.IMAGE_TAG }}
+
+    - name: Push image with 'latest' tag
       run: docker push ${{ secrets.DOCKER_USERNAME }}/kafka-kubernetes-demo:latest
