@@ -10,6 +10,13 @@ Interacting with the application and Kafka are demonstrated by calling the REST 
 ### Important notes
 Minikube is mandatory at this guideline. Although this app can be deployed at any cluster via helm chart. It's tested also with Metallb at a single node cluster with rke2.
 
+### Dockerhub link
+
+[barlojohn/kafka-kubernetes-demo on Docker Hub](https://hub.docker.com/repository/docker/barlojohn/kafka-kubernetes-demo/general)
+
+
+
+
 # Walkthrough
 
 ### Run minikube
