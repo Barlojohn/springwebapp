@@ -64,10 +64,6 @@ kafka-console-consumer --bootstrap-server localhost:9092 --topic demo-outbound-t
 kubectl exec -it kafka-deployment-6cc5777dd5-jnj8k -n demo -- bash
 ```
 
-```
-kubectl exec -it kafka-deployment-6cc5777dd5-jnj8k -n demo -- bash
-```
-
 ### Kafka Producer - Run at pod
 
 ```
