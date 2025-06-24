@@ -5,7 +5,7 @@ The application provides a REST endpoint that accepts a request to trigger sendi
 
 The application also consumes an event that triggers sending outbound events. The number of events to produce can be specified.
 
-Kafka, Zookeeper, and the demo Spring Boot application are deployed as Docker containers to minikube, which is an implementation of Kubernetes that is great for local testing. Interacting with the application and Kafka are demonstrated by calling the REST endpoint to trigger emitting events, and by sending events to Kafka and receiving the emitted events from the application via the Kafka commandline tools.
+Interacting with the application and Kafka are demonstrated by calling the REST endpoint to trigger emitting events, and by sending events to Kafka and receiving the emitted events from the application via the Kafka commandline tools.
 
 # Walkthrough
 
