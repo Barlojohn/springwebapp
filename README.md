@@ -101,7 +101,7 @@ kubectl exec -it kafka-deployment-6cc5777dd5-jnj8k -n demo -- bash
 kafka-console-producer --broker-list localhost:9092 --topic demo-inbound-topic
 ```
 
-### Enter 2 events to kafka consumer
+### Enter 2 events to kafka-console-producer
 
 ```
 {"numberOfEvents":2}
