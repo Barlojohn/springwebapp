@@ -124,4 +124,11 @@ kafka-console-producer --broker-list localhost:9092 --topic demo-inbound-topic
 ![image](https://github.com/user-attachments/assets/6ec23337-3a65-4704-bc59-50971530f234)
 
 
+# Pipeline
+In order to use the new image build from pipeline please use the external image-values.yaml(located in the `helm/` directory)
+```
+helm upgrade springwebapp kafka_webapp-0.9.0.tgz -f image-values.yaml
+```
+
+![image](https://github.com/user-attachments/assets/fc0b7130-16b5-4863-bf7f-1d65577f61ff)
 
