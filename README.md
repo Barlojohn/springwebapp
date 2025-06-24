@@ -22,7 +22,7 @@ minikube start
 
 
 
-### Deploy the helm chart
+### Deploy the helm chart (located in the `helm/` directory)
 
 ```
 helm install springwebapp kafka_webapp-0.9.0.tgz
