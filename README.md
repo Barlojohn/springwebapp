@@ -69,6 +69,9 @@ curl -v -d '{"numberOfEvents":3}' -H "Content-Type: application/json" http://{EX
 ```
 kubectl logs kafka-kubernetes-demo-7795456b4d-9kp6f -n demo
 ```
+![image](https://github.com/user-attachments/assets/d44798f6-3ec0-4a0e-81bf-1883399de3c5)
+
+
 
 ## Interacting via Events
 
