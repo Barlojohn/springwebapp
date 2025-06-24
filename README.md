@@ -58,7 +58,11 @@ kubectl exec -it kafka-deployment-6cc5777dd5-jnj8k -n demo -- bash
 kafka-console-consumer --bootstrap-server localhost:9092 --topic demo-outbound-topic --from-beginning
 ```
 
-### Open a new terminal and execute : kubectl exec -it kafka-deployment-6cc5777dd5-jnj8k -n demo -- bash
+### Open a new terminal and execute : 
+
+```
+kubectl exec -it kafka-deployment-6cc5777dd5-jnj8k -n demo -- bash
+```
 
 ```
 kubectl exec -it kafka-deployment-6cc5777dd5-jnj8k -n demo -- bash
