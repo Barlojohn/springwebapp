@@ -57,6 +57,8 @@ kubectl exec -it kafka-deployment-6cc5777dd5-jnj8k -n demo -- bash
 ```
 kafka-console-consumer --bootstrap-server localhost:9092 --topic demo-outbound-topic --from-beginning
 ```
+![image](https://github.com/user-attachments/assets/dab10b10-6cf3-45f3-9ed3-a8543d74d24d)
+
 
 ### Open a new terminal and execute : 
 
@@ -75,6 +77,13 @@ kafka-console-producer --broker-list localhost:9092 --topic demo-inbound-topic
 ```
 {"numberOfEvents":2}
 ```
+![image](https://github.com/user-attachments/assets/7a770728-3bcf-4784-8634-76b1d0033979)
+
 
 ### This must be reflected at Kafka consumer and Spring Boot application logs.
+![image](https://github.com/user-attachments/assets/4957ac5f-d2d9-47e4-b560-ee37737b5944)
+
+![image](https://github.com/user-attachments/assets/6ec23337-3a65-4704-bc59-50971530f234)
+
+
 
