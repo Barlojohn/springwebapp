@@ -15,12 +15,16 @@ Start the cluster
 ```
 minikube start
 ```
+![image](https://github.com/user-attachments/assets/7c60c509-5afb-44f6-a2f9-f03c08677588)
+
 
 ### Deploy the helm chart
 
 ```
-helm install kafka_webapp-0.9.0.tgz
+helm install springwebapp kafka_webapp-0.9.0.tgz
 ```
+![image](https://github.com/user-attachments/assets/1ed5d49e-064e-4d9c-90c4-fab350bb8343)
+
 
 ### After the system is up and running expose the spring boot app. This will open the root page of the Spring Boot application in the browser, which displays Spring Boot Demo
 
