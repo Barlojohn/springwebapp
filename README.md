@@ -18,6 +18,7 @@ minikube start
 ![image](https://github.com/user-attachments/assets/7c60c509-5afb-44f6-a2f9-f03c08677588)
 
 
+
 ### Deploy the helm chart
 
 ```
@@ -25,8 +26,13 @@ helm install springwebapp kafka_webapp-0.9.0.tgz
 ```
 ![image](https://github.com/user-attachments/assets/1ed5d49e-064e-4d9c-90c4-fab350bb8343)
 
+
+
+
 ### Some minutes later the pods should be up and running:
 ![image](https://github.com/user-attachments/assets/253624e5-ab4b-4e1a-9175-0d9103879433)
+
+
 
 
 ### After the system is up and running expose the spring boot app. This will open the root page of the Spring Boot application in the browser, which displays Spring Boot Demo
@@ -35,6 +41,8 @@ helm install springwebapp kafka_webapp-0.9.0.tgz
 minikube service kafka-kubernetes-demo-service --namespace demo
 ```
 ![image](https://github.com/user-attachments/assets/545cf61b-ba39-43f6-bdd6-997080bf6ede)
+
+
 
 
 ### Running the Demo, interacting via REST
@@ -49,6 +57,8 @@ curl -X GET http://{EXPOSED_IP}:{PORT}/v1/demo/version
 curl -v -d '{"numberOfEvents":3}' -H "Content-Type: application/json" http://{EXPOSED_IP}:{PORT}/v1/demo/trigger
 ```
 ![image](https://github.com/user-attachments/assets/f6a3a0ed-700a-4a28-86a4-5ecf715539cc)
+
+
 
 
 ### Check the logs from kafka-kubernetes-demo pod
@@ -71,6 +81,8 @@ kafka-console-consumer --bootstrap-server localhost:9092 --topic demo-outbound-t
 ![image](https://github.com/user-attachments/assets/dab10b10-6cf3-45f3-9ed3-a8543d74d24d)
 
 
+
+
 ### Open a new terminal and execute : 
 
 ```
@@ -89,6 +101,8 @@ kafka-console-producer --broker-list localhost:9092 --topic demo-inbound-topic
 {"numberOfEvents":2}
 ```
 ![image](https://github.com/user-attachments/assets/7a770728-3bcf-4784-8634-76b1d0033979)
+
+
 
 
 ### This must be reflected at Kafka consumer and Spring Boot application logs.
