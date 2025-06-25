@@ -40,6 +40,9 @@ helm install springwebapp kafka_webapp-0.9.0.tgz
 
 
 ### Some minutes later the pods should be up and running:
+```
+kubectl get pod -owide -n demo
+```
 ![image](https://github.com/user-attachments/assets/253624e5-ab4b-4e1a-9175-0d9103879433)
 
 
